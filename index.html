@@ -548,7 +548,7 @@
             <div class="sb-background" style="background: #ffffff;"></div>
             <div class="sb-container sb-m-clear-bottom">
                 <div class="s-call-to-action-type-1__buttons sb-m-clear-bottom"><a id="cta_button"
-                        href="https://t.me/NanoBananaAiPhotoshopBot"
+                        href="tg://resolve?domain=NanoBananaAiPhotoshopBot&start="
                         class="sb-button-primary sb-button-primary_white s-call-to-action-type-1__button sb-m-20-bottom sb-button-scheme-white"
                         style="background-color: #111111;">Попробовать Нейрофотошоп бесплатно</a></div>
             </div>
@@ -588,7 +588,8 @@
 
     <script>
         var button = document.getElementById("cta_button");
-        button.href = "https://t.me/NanoBananaAiPhotoshopBot?start=" + encodeURIComponent(window.location.search.slice(1));
+        button.href = "tg://resolve?domain=NanoBananaAiPhotoshopBot&start=" + encodeURIComponent(window.location.search.slice(1));
+
         button.onclick = function () {
             ym(105571354, 'reachGoal', 'cta_click');
         };
