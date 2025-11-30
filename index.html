@@ -587,12 +587,16 @@
     </section>
 
     <script>
-        var button = document.getElementById("cta_button");
-        button.href = "tg://resolve?domain=NanoBananaAiPhotoshopBot&start=" + encodeURIComponent(window.location.search.slice(1));
+        ym(105571354, 'getClientID', function (clientID) {
+            var button = document.getElementById("cta_button");
+            var params = new URLSearchParams(window.location.search);
+            params.set("ym_client_id", clientID);
+            button.href = "https://bananabot.hackcrafted.com/redirect?" + params.toString();
 
-        button.onclick = function () {
-            ym(105571354, 'reachGoal', 'cta_click');
-        };
+            button.onclick = function () {
+                ym(105571354, 'reachGoal', 'cta_click');
+            };
+        });
     </script>
 </body>
 
